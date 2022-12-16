@@ -68,8 +68,11 @@ me.skills.pop();
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
+let numeriRandom = [];
+
 function dice() {
-    return Math.floor(Math.random() * 7);
+    numeriRandom.push(Math.floor(Math.random() * 7));
+    return numeriRandom;
 }
 //console.log(dice());
 
@@ -93,46 +96,99 @@ function whoIsBigger(a, b) {
 */
 
 const splitMe = (stringa) => stringa.split(" ");
-console.log(splitMe("Ciao a tutti mi chiamo Adina"));
+//console.log(splitMe("Ciao a tutti mi chiamo Adina"));
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
 
+function deleteOne(stringa, boolean) {
+    if (boolean === true) {
+        return stringa.slice(1);
+    } else {
+        return stringa.slice(0, -1);
+    }
+}
+//console.log(deleteOne("Ciao a tutti", true));
+
 /* ESERCIZIO 5
    Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numerich 
    Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
+function onlyLetters(str) {
+    let result = str.match(/[a-zA-Z" "]/g);
+    return result.join("");
+}
+//console.log(onlyLetters("I have 4 dogs"));
+
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
+
+function isThisAnEmail(email) {
+    let validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (email.match(validEmail)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+//console.log(isThisAnEmail("iamandi.ad.com"));
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
 
-/* ESERCIZIO 8
-      Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
-      Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
-      il suo valore deve rappresentare il totale di tutti i valori estratti con le invocazioni di dice().
-      L'oggetto ritornato deve anche contenere una proprietà "values", contenente un array con tutti i valori estratti dalle invocazioni di dice().
+function whatDayIsIt() {
+    let day = new Date();
+    let currentDay = day.getDay();
+    switch (currentDay) {
+        case 0:
+            return "Domenica";
+            break;
+        case 1:
+            return "Lunedì";
+            break;
+        case 2:
+            return "Martedì";
+            break;
+        case 3:
+            return "Mercoledì";
+            break;
+        case 4:
+            return "Giovedì";
+            break;
+        case 5:
+            return "Venerdì";
+            break;
+        case 6:
+            return "Sabato";
+            break;
+    }
+}
+//console.log(whatDayIsIt());
 
-      Example:
-      rollTheDices(3) => ritorna {
-          sum: 10
-          values: [3, 3, 4]
-      }
-    */
+/* ESERCIZIO 8
+  Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
+  Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
+  il suo valore deve rappresentare il totale di tutti i valori estratti con le invocazioni di dice().
+  L'oggetto ritornato deve anche contenere una proprietà "values", contenente un array con tutti i valori estratti dalle invocazioni di dice()
+  Example:
+  rollTheDices(3) => ritorna {
+      sum: 10
+      values: [3, 3, 4]
+  }
+*/
 
 /* ESERCIZIO 9
-      Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
-    */
+  Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
+*/
 
 /* ESERCIZIO 10
-      Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
-    */
+    Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
+*/
 
 // Arrays & Oggetti
 
