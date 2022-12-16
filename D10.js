@@ -186,9 +186,22 @@ function whatDayIsIt() {
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
+function howManyDays(data) {
+    let timeDifference = Date.now() - Date.parse(data);
+    timeDifference = timeDifference / (10006060 * 24);
+}
+console.log(howManyDays("12/15/2022"));
+
 /* ESERCIZIO 10
     Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+
+const birthday = new Date("April 21, 1995 20:45:30");
+const currentDay = Date.now();
+//console.log(birthday);
+//console.log(currentDay);
+
+function isTodayMyBirthday() {}
 
 // Arrays & Oggetti
 
