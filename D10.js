@@ -345,7 +345,6 @@ const newestMovie = (array) => {
 function countMovies(array) {
     return array.length;
 }
-
 //console.log(countMovies(movies));
 
 /* ESERCIZIO 14
@@ -355,10 +354,16 @@ function countMovies(array) {
 function onlyTheYears(array) {
     return array.map((film) => film.Year);
 }
-console.log(onlyTheYears(movies));
+//console.log(onlyTheYears(movies));
+
 /* ESERCIZIO 15
-      Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
-    */
+    Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
+*/
+
+function onlyInLastMillennium(array) {
+    for (let i = 0; i < )
+}
+console.log(onlyInLastMillennium(movies));
 
 /* ESERCIZIO 16
       Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
