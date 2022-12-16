@@ -68,13 +68,10 @@ me.skills.pop();
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
-let numeriRandom = [];
-
 function dice() {
-    numeriRandom.push(Math.floor(Math.random() * 7));
-    return numeriRandom;
+    return Math.floor(Math.random() * 7);
 }
-//console.log(dice());
+//console.log(dice(3));
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
@@ -182,15 +179,28 @@ function whatDayIsIt() {
   }
 */
 
+function rollTheDices(n) {
+    let values = [];
+    for (let i = 0; i < n; i++) {
+        values.push(dice());
+    }
+    let sum = values.reduce((e, num) => e + num);
+    return { sum, values };
+}
+
+//console.log(rollTheDices(3));
+
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
 function howManyDays(data) {
-    let timeDifference = Date.now() - Date.parse(data);
-    timeDifference = timeDifference / (10006060 * 24);
+    let currentDate = new Date();
+    let dataInserita = new Date(data);
+    let timeDifference = currentDate - dataInserita;
+    return Math.floor(timeDifference / (10006060 * 24));
 }
-console.log(howManyDays("12/15/2022"));
+//console.log(howManyDays(2022 - 12 - 15));
 
 /* ESERCIZIO 10
     Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
@@ -201,28 +211,28 @@ const currentDay = Date.now();
 //console.log(birthday);
 //console.log(currentDay);
 
-function isTodayMyBirthday() {}
+//function isTodayMyBirthday() {}
 
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
 
 /* ESERCIZIO 11
-      Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
-      in esso la proprietà chiamata come la stringa passata come secondo parametro.
-    */
+  Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
+  in esso la proprietà chiamata come la stringa passata come secondo parametro.
+*/
 
 /* ESERCIZIO 12
-      Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
-    */
+  Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
+*/
 
 /* ESERCIZIO 13
-      Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
-    */
+  Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
+*/
 
 /* ESERCIZIO 14
-      Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
-    */
+  Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
+*/
 
 /* ESERCIZIO 15
       Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
