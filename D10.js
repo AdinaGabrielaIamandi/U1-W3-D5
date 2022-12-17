@@ -438,7 +438,7 @@ function searchAndDivide(str) {
 */
 
 function removeIndex(index) {
-    movies.forEach((film) => film.splice(index));
+    return delete movies[index];
 }
 
 console.log(removeIndex(0));
