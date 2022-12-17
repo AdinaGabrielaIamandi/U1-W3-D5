@@ -407,11 +407,10 @@ function sumAllTheYears(array) {
 function searchByTitle(str) {
     for (let i = 0; i < movies.length; i++) {
         if (str === movies[i].Title) {
-            return movies[i];
+            return movies[i].Title;
         }
     }
 }
-
 //console.log(searchByTitle("Avengers: Endgame"));
 
 /* ESERCIZIO 18
@@ -419,69 +418,84 @@ function searchByTitle(str) {
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
+function searchAndDivide(str) {
+    let match = [];
+    let unmatch = [];
+    for (let i = 0; i < movies.length; i++) {
+        if (str === movies[i].Title) {
+            match.push(movies[i].Title);
+        } else {
+            unmatch.push(movies[i].Title);
+        }
+    }
+    return { match, unmatch };
+}
+
+console.log(searchAndDivide("Avengers: Endgame"));
+
 /* ESERCIZIO 19
-              Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
-            */
+  Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
+*/
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
-              Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
-            */
+                  Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
+                */
 
 /* ESERCIZIO 21
-              Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
-            */
+                  Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
+                */
 
 /* ESERCIZIO 22
-              Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
-            */
+                  Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
+                */
 
 /* ESERCIZIO 23
-              Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
-            */
+                  Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
+                */
 
 /* ESERCIZIO 24
-              Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
-            */
+                  Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
+                */
 
 /* ESERCIZIO 25
-              Scrivi una funzione per svuotare la lista non ordinata con id "myList".
-            */
+                  Scrivi una funzione per svuotare la lista non ordinata con id "myList".
+                */
 
 /* ESERCIZIO 26
-              Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
-            */
+                  Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
+                */
 
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
-              Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
+                  Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
 
-              Esempio:
-              halfTree(3)
+                  Esempio:
+                  halfTree(3)
 
-              *
-              **
-              ***
+                  *
+                  **
+                  ***
 
-            */
+                */
 
 /* ESERCIZIO 28
-              Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
+                  Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
-              Esempio:
-              tree(3)
+                  Esempio:
+                  tree(3)
 
-                *
-               ***
-              *****
+                    *
+                   ***
+                  *****
 
-            */
+                */
 
 /* ESERCIZIO 29
-              Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
-            */
+                  Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
+                */
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
