@@ -401,13 +401,23 @@ function sumAllTheYears(array) {
 //console.log(sumAllTheYears(movies));
 
 /* ESERCIZIO 17
-      Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
-    */
+  Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
+*/
+
+function searchByTitle(str) {
+    for (let i = 0; i < movies.length; i++) {
+        if (str === movies[i].Title) {
+            return movies[i];
+        }
+    }
+}
+
+//console.log(searchByTitle("Avengers: Endgame"));
 
 /* ESERCIZIO 18
-      Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
-      "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
-    */
+  Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e       "unmatch".
+  "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
+*/
 
 /* ESERCIZIO 19
               Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
