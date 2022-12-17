@@ -216,7 +216,7 @@ function isTodayMyBirthday() {
     }
 }
 
-console.log(isTodayMyBirthday());
+//console.log(isTodayMyBirthday());
 
 // Arrays & Oggetti
 
@@ -324,25 +324,29 @@ const movies = [{
 ];
 
 /* ESERCIZIO 11
-      Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
-      in esso la proprietà chiamata come la stringa passata come secondo parametro.
-    */
+  Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato in esso la proprietà chiamata come la stringa passata come secondo parametro.
+*/
 
 /*const pet = {
-        dog: "Fufi",
-        cat: "Pepe",
-        redfish: "Nemo",
-        hamster: "Gigi",
-    };
-    console.log(pet);
+    dog: "Fufi",
+    cat: "Pepe",
+    redfish: "Nemo",
+    hamster: "Gigi",
+};
 
-    function pet (str) {
-      if (str === )
+function deleteProp(pet, str) {
+    if (str === pet.propriety) {
+        return delete pet.propriety;
+    } else {
+        return pet;
     }
+}
 
-    /* ESERCIZIO 12
-      Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
-    */
+console.log(deleteProp("hamster"));*/
+
+/* ESERCIZIO 12
+  Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
+*/
 
 const newestMovie = (array) => {
     let filmPiùNuovo = array[0];
@@ -356,8 +360,8 @@ const newestMovie = (array) => {
 //console.log(newestMovie(movies));
 
 /* ESERCIZIO 13
-      Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
-    */
+  Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
+*/
 
 function countMovies(array) {
     return array.length;
@@ -365,8 +369,8 @@ function countMovies(array) {
 //console.log(countMovies(movies));
 
 /* ESERCIZIO 14
-      Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
-    */
+  Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
+*/
 
 function onlyTheYears(array) {
     return array.map((film) => film.Year);
@@ -374,17 +378,23 @@ function onlyTheYears(array) {
 //console.log(onlyTheYears(movies));
 
 /* ESERCIZIO 15
-        Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
-    */
+  Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
+*/
 
-/*function onlyInLastMillennium(array) {
-        for (let i = 0; i < )
-    }
-    console.log(onlyInLastMillennium(movies));
+function onlyInLastMillennium(array) {
+    return array.filter((item) => parseInt(item.Year) < 2000);
+}
+//console.log(onlyInLastMillennium(movies));
 
-    /* ESERCIZIO 16
-          Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
-        */
+/* ESERCIZIO 16
+  Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
+*/
+
+const sumAllTheYears = movies.reduce((acc, film, index, array) => {
+    return acc + parseInt(film.Year);
+});
+
+console.log(sumAllTheYears);
 
 /* ESERCIZIO 17
           Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
