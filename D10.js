@@ -437,9 +437,6 @@ function searchAndDivide(str) {
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
-/*function removeIndex(index) {
-    return movies.splice(index, 1);
-}*/
 function removeIndex(indice) {
     movies.splice(indice, 1);
     return movies;
@@ -450,16 +447,20 @@ function removeIndex(indice) {
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
-                  Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
-                */
+  Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
+*/
+
+const container = document.getElementById("container");
 
 /* ESERCIZIO 21
-                  Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
-                */
+  Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
+*/
+
+const td = document.getElementsByTagName("td");
 
 /* ESERCIZIO 22
-                  Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
-                */
+  Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
+*/
 
 /* ESERCIZIO 23
                   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
@@ -506,6 +507,3 @@ function removeIndex(indice) {
 /* ESERCIZIO 29
                   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
                 */
-
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
