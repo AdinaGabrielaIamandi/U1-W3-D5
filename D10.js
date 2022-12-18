@@ -327,22 +327,22 @@ const movies = [{
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 
-/*const pet = {
+const pet = {
     dog: "Fufi",
     cat: "Pepe",
     redfish: "Nemo",
     hamster: "Gigi",
 };
 
-function deleteProp(pet, str) {
-    if (str === pet.propriety) {
-        return delete pet.propriety;
-    } else {
-        return pet;
+function deleteProp(object, str) {
+    for (let k in object) {
+        if (str === k) {
+            delete object[k];
+        }
     }
+    return object;
 }
-
-console.log(deleteProp("hamster"));*/
+//console.log(deleteProp(pet, "cat"));
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
@@ -441,7 +441,7 @@ function removeIndex(index) {
     return delete movies[index];
 }
 
-console.log(removeIndex(0));
+//console.log(removeIndex(0));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
