@@ -342,7 +342,7 @@ function deleteProp(object, str) {
     }
     return object;
 }
-//console.log(deleteProp(pet, "cat"));
+//console.log(deleteProp(pet, "horse"));
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
@@ -437,11 +437,15 @@ function searchAndDivide(str) {
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
-function removeIndex(index) {
-    return delete movies[index];
+/*function removeIndex(index) {
+    return movies.splice(index, 1);
+}*/
+function removeIndex(indice) {
+    movies.splice(indice, 1);
+    return movies;
 }
 
-//console.log(removeIndex(0));
+//console.log(removeIndex(3));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
