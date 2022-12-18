@@ -456,54 +456,79 @@ const container = document.getElementById("container");
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
-const td = document.getElementsByTagName("td");
+const tuttiTd = document.getElementsByTagName("td");
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
+const tuttiTdArray = Array.from(td);
+tuttiTdArray.forEach((td) => console.log(td));
+
 /* ESERCIZIO 23
-                  Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
-                */
+  Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
+*/
+
+const links = document.querySelectorAll("a");
+links.style.background = "red";
 
 /* ESERCIZIO 24
-                  Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
-                */
+  Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
+*/
+
+const addListItem = () => {
+    const newItem = document.createElement("li");
+    newItem.innerText = "Ciao";
+    const padre = document.getElementById("myList");
+    padre.appendChild(newItem);
+};
 
 /* ESERCIZIO 25
-                  Scrivi una funzione per svuotare la lista non ordinata con id "myList".
-                */
+  Scrivi una funzione per svuotare la lista non ordinata con id "myList".
+*/
+
+const deleteList = () => {
+    const lista = document.getElementById("myList");
+    const selezionati = document.querySelectorAll("li");
+    selezionati.forEach((element) => lista.removeChild(element));
+};
 
 /* ESERCIZIO 26
-                  Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
-                */
+  Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
+*/
+
+const addClass = () => {
+    const tr = document.querySelectorAll("tr");
+    tr.classList.add("test");
+    tr.forEach((element) => element.classList.add("test"));
+};
 
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
-                  Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
+  Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
 
-                  Esempio:
-                  halfTree(3)
+  Esempio:
+  halfTree(3)
 
-                  *
-                  **
-                  ***
+  *
+  **
+  ***
 
-                */
+*/
 
 /* ESERCIZIO 28
-                  Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
+  Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
-                  Esempio:
-                  tree(3)
+  Esempio:
+  tree(3)
 
-                    *
-                   ***
-                  *****
+    *
+   ***
+  *****
 
-                */
+*/
 
 /* ESERCIZIO 29
-                  Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
-                */
+  Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
+*/
